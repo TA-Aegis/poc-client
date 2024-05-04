@@ -18,6 +18,14 @@
   const url = window.location.href;
 
   document.getElementById('currentUrl').textContent = `Current URL: ${url}`;
+  async function queue() {
+    try{
+      const req = await fetch('https://api.antrein.com/bc/queue/gg')
+      console.log(req)
+    }
+    catch(e) {}
+  }
+  queue()
 </script>
 </body>
 </html>
